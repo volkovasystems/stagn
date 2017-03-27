@@ -68,8 +68,6 @@ const protype = require( "protype" );
 const pyck = require( "pyck" );
 const redupe = require( "redupe" );
 
-const CLASS_NAME_PATTERN = /^[A-Z][A-Za-z0-9]+$/;
-
 const stagn = function stagn( blueprint, set ){
 	/*;
 		@meta-configuration:
@@ -84,9 +82,7 @@ const stagn = function stagn( blueprint, set ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( blueprint ) || !protype( blueprint, FUNCTION ) ||
-		!CLASS_NAME_PATTERN.test( blueprint.name ) )
-	{
+	if( falzy( blueprint ) || !protype( blueprint, FUNCTION ) ){
 		throw new Error( "invalid blueprint" );
 	}
 
