@@ -1,6 +1,6 @@
 {
   "name": "stagn",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "description": "Attach static entity to the class.",
   "main": "stagn.js",
   "support": "stagn.support.js",
@@ -39,7 +39,7 @@
     "plough": "^0.25.0",
     "protype": "^0.21.0",
     "pyck": "^0.28.0",
-    "redupe": "^0.9.0"
+    "redupe": "^0.10.0"
   },
   "devDependencies": {
     "babel-cli": "^6.24.1",
