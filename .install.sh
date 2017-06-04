@@ -1,6 +1,5 @@
 yarn add \
 babel-runtime \
-budge \
 falzy \
 harden \
 kein \
@@ -8,6 +7,7 @@ plough \
 protype \
 pyck \
 redupe \
+shft \
 --save && \
 yarn add \
 babel-cli \
@@ -18,7 +18,6 @@ source-map-loader \
 webpack \
 --dev && \
 bower install \
-budge \
 falzy \
 harden \
 kein \
@@ -26,5 +25,6 @@ plough \
 protype \
 pyck \
 redupe \
+shft \
 --save \
 --force-latest
