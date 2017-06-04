@@ -50,19 +50,18 @@
 
 	@include:
 		{
-			"budge": "budge",
 			"falzy": "falzy",
 			"harden": "harden",
 			"kein": "kein",
 			"plough": "plough",
 			"protype": "protype",
 			"pyck": "pyck",
-			"redupe": "redupe"
+			"redupe": "redupe",
+			"shft": "shft"
 		}
 	@end-include
 */
 
-const budge = require( "budge" );
 const falzy = require( "falzy" );
 const harden = require( "harden" );
 const kein = require( "kein" );
@@ -70,6 +69,7 @@ const plough = require( "plough" );
 const protype = require( "protype" );
 const pyck = require( "pyck" );
 const redupe = require( "redupe" );
+const shft = require( "shft" );
 
 const stagn = function stagn( blueprint, set ){
 	/*;
@@ -89,7 +89,7 @@ const stagn = function stagn( blueprint, set ){
 		throw new Error( "invalid blueprint" );
 	}
 
-	set = redupe.apply( null, pyck( plough( budge( arguments ) ).map( ( entity ) => {
+	set = redupe.apply( null, pyck( plough( shft( arguments ) ).map( ( entity ) => {
 		if( protype( entity, OBJECT ) ){
 			return entity;
 
