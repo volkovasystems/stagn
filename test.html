@@ -1,8 +1,33 @@
+<!DOCTYPE html>
 <html>
 	<head>
-		<script
-			type="application/javascript"
-			src="./stagn.deploy.js">
-		</script>
+		<title>stagn unit test</title>
+
+		<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.3.2.css">
+
+		<script type="application/javascript" src="https://code.jquery.com/qunit/qunit-2.3.2.js"></script>
+
+		<script type="application/javascript" src="./stagn.deploy.js"></script>
 	</head>
+
+	<body>
+		<div id="qunit"></div>
+
+		<div id="qunit-fixture"></div>
+
+		<script type="application/javascript">
+			QUnit.test( "stagn unit test", function( assert ) {
+
+				assert.equal( typeof stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } ) == "function",
+								true, "should return true" );
+
+				let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
+				
+				assert.equal( Test.yeah, "world", "should return 'world'" );
+
+				assert.equal( typeof Test.why == "function", true, "should return true" );
+
+			} );
+		</script>
+	</body>
 </html>
