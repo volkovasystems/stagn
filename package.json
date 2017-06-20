@@ -1,6 +1,6 @@
 {
   "name": "stagn",
-  "version": "0.10.0",
+  "version": "0.11.0",
   "description": "Attach static entity to the class.",
   "main": "stagn.js",
   "support": "stagn.support.js",
@@ -38,8 +38,8 @@
     "kein": "^0.26.0",
     "plough": "^0.26.0",
     "protype": "^0.22.0",
-    "pyck": "^0.34.0",
-    "redupe": "^0.12.0",
+    "pyck": "^0.35.0",
+    "redupe": "^0.13.0",
     "shft": "^0.2.0"
   },
   "devDependencies": {
@@ -48,6 +48,6 @@
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
     "source-map-loader": "^0.2.1",
-    "webpack": "^2.6.1"
+    "webpack": "^3.0.0"
   }
 }
