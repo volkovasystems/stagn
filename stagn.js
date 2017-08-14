@@ -55,7 +55,6 @@
 			"harden": "harden",
 			"kein": "kein",
 			"plough": "plough",
-			"protype": "protype",
 			"pyck": "pyck",
 			"redupe": "redupe",
 			"shft": "shft"
@@ -67,7 +66,6 @@ const falzy = require( "falzy" );
 const harden = require( "harden" );
 const kein = require( "kein" );
 const plough = require( "plough" );
-const protype = require( "protype" );
 const pyck = require( "pyck" );
 const redupe = require( "redupe" );
 const shft = require( "shft" );
@@ -86,15 +84,15 @@ const stagn = function stagn( blueprint, set ){
 		@end-meta-configuration
 	*/
 
-	if( falzy( blueprint ) || !protype( blueprint, FUNCTION ) ){
+	if( falzy( blueprint ) || typeof blueprint != "function" ){
 		throw new Error( "invalid blueprint" );
 	}
 
 	set = redupe.apply( null, pyck( plough( shft( arguments ) ).map( ( entity ) => {
-		if( protype( entity, OBJECT ) ){
+		if( typeof entity == "object" ){
 			return entity;
 
-		}else if( !protype( entity, OBJECT ) && kein( "name", entity ) ){
+		}else if( typeof entity != "object" && kein( "name", entity ) ){
 			return { [ entity.name ]: entity };
 
 		}else{

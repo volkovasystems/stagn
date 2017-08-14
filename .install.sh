@@ -4,7 +4,6 @@ falzy \
 harden \
 kein \
 plough \
-protype \
 pyck \
 redupe \
 shft \
@@ -22,7 +21,6 @@ falzy \
 harden \
 kein \
 plough \
-protype \
 pyck \
 redupe \
 shft \

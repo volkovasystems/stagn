@@ -1,14 +1,17 @@
 {
   "name": "stagn",
-  "version": "0.13.0",
+  "version": "0.14.0",
   "description": "Attach static entity to the class.",
   "main": "stagn.js",
   "support": "stagn.support.js",
   "deploy": "stagn.deploy.js",
   "browser": "stagn.browser.js",
   "scripts": {
-    "build": "babel stagn.js --out-file stagn.support.js --source-maps && webpack --progress --display-modules",
-    "test": "mocha stagn-test.js"
+	"pristine": "rsetmod clean && flxc execute ./.install.sh",
+	"clear": "rsetmod clean --clear",
+	"build": "babel stagn.js --out-file stagn.support.js --source-maps && webpack --progress --display-modules",
+	"pretest": "npm run clear && npm run build",
+	"test": "node stagn-test.js"
   },
   "repository": {
     "type": "git",
