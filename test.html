@@ -19,13 +19,14 @@
 			QUnit.test( "stagn unit test", function( assert ) {
 
 				assert.equal( typeof stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } ) == "function",
-								true, "should return true" );
+					true, "should be of function data type" );
 
 				let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
-				
-				assert.equal( Test.yeah, "world", "should return 'world'" );
+				console.log( Test );
 
-				assert.equal( typeof Test.why == "function", true, "should return true" );
+				assert.equal( Test.yeah, "world", "should be equal to 'world'" );
+
+				assert.equal( typeof Test.why == "function", true, "should be of function data type" );
 
 			} );
 		</script>
