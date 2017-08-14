@@ -1,56 +1,55 @@
 {
-  "name": "stagn",
-  "version": "0.14.0",
-  "description": "Attach static entity to the class.",
-  "main": "stagn.js",
-  "support": "stagn.support.js",
-  "deploy": "stagn.deploy.js",
-  "browser": "stagn.browser.js",
-  "scripts": {
-	"pristine": "rsetmod clean && flxc execute ./.install.sh",
-	"clear": "rsetmod clean --clear",
-	"build": "babel stagn.js --out-file stagn.support.js --source-maps && webpack --progress --display-modules",
-	"pretest": "npm run clear && npm run build",
-	"test": "node stagn-test.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/volkovasystems/stagn.git"
-  },
-  "keywords": [
-    "attach",
-    "static",
-    "entity",
-    "class",
-    "stagn"
-  ],
-  "author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-  "contributors": [
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/volkovasystems/stagn/issues"
-  },
-  "homepage": "https://github.com/volkovasystems/stagn#readme",
-  "dependencies": {
-    "babel-runtime": "^6.23.0",
-    "falzy": "^0.20.0",
-    "harden": "^0.22.0",
-    "kein": "^0.26.0",
-    "plough": "^0.26.0",
-    "protype": "^0.22.0",
-    "pyck": "^0.35.0",
-    "redupe": "^0.15.0",
-    "shft": "^0.2.0"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-core": "^6.25.0",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "source-map-loader": "^0.2.1",
-    "webpack": "^3.0.0"
-  }
+	"name": "stagn",
+	"version": "0.14.0",
+	"description": "Attach static entity to the class.",
+	"main": "stagn.js",
+	"support": "stagn.support.js",
+	"deploy": "stagn.deploy.js",
+	"browser": "stagn.browser.js",
+	"scripts": {
+		"pristine": "rsetmod clean && flxc execute ./.install.sh",
+		"clear": "rsetmod clean --clear",
+		"build": "babel stagn.js --out-file stagn.support.js --source-maps && webpack --progress --display-modules",
+		"pretest": "npm run clear && npm run build",
+		"test": "node stagn-test.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/volkovasystems/stagn.git"
+	},
+	"keywords": [
+		"attach",
+		"static",
+		"entity",
+		"class",
+		"stagn"
+	],
+	"author": "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+	"contributors": [
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/volkovasystems/stagn/issues"
+	},
+	"homepage": "https://github.com/volkovasystems/stagn#readme",
+	"dependencies": {
+		"babel-runtime": "^6.25.0",
+		"falzy": "^0.23.0",
+		"harden": "^0.23.0",
+		"kein": "^0.30.0",
+		"plough": "^0.29.0",
+		"pyck": "^0.38.0",
+		"redupe": "^0.16.0",
+		"shft": "^0.5.0"
+	},
+	"devDependencies": {
+		"babel-cli": "^6.24.1",
+		"babel-core": "^6.25.0",
+		"babel-plugin-transform-runtime": "^6.23.0",
+		"babel-preset-latest": "^6.24.1",
+		"source-map-loader": "^0.2.1",
+		"webpack": "^3.5.4"
+	}
 }

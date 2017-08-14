@@ -55,19 +55,17 @@
               			"harden": "harden",
               			"kein": "kein",
               			"plough": "plough",
-              			"protype": "protype",
               			"pyck": "pyck",
               			"redupe": "redupe",
               			"shft": "shft"
               		}
               	@end-include
-              */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);var _defineProperty2 = require("babel-runtime/helpers/defineProperty");var _defineProperty3 = _interopRequireDefault(_defineProperty2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
+              */var _getOwnPropertyNames = require("babel-runtime/core-js/object/get-own-property-names");var _getOwnPropertyNames2 = _interopRequireDefault(_getOwnPropertyNames);var _defineProperty2 = require("babel-runtime/helpers/defineProperty");var _defineProperty3 = _interopRequireDefault(_defineProperty2);var _typeof2 = require("babel-runtime/helpers/typeof");var _typeof3 = _interopRequireDefault(_typeof2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}
 
 var falzy = require("falzy");
 var harden = require("harden");
 var kein = require("kein");
 var plough = require("plough");
-var protype = require("protype");
 var pyck = require("pyck");
 var redupe = require("redupe");
 var shft = require("shft");
@@ -86,15 +84,15 @@ var stagn = function stagn(blueprint, set) {
                                             	@end-meta-configuration
                                             */
 
-	if (falzy(blueprint) || !protype(blueprint, FUNCTION)) {
+	if (falzy(blueprint) || typeof blueprint != "function") {
 		throw new Error("invalid blueprint");
 	}
 
 	set = redupe.apply(null, pyck(plough(shft(arguments)).map(function (entity) {
-		if (protype(entity, OBJECT)) {
+		if ((typeof entity === "undefined" ? "undefined" : (0, _typeof3.default)(entity)) == "object") {
 			return entity;
 
-		} else if (!protype(entity, OBJECT) && kein("name", entity)) {
+		} else if ((typeof entity === "undefined" ? "undefined" : (0, _typeof3.default)(entity)) != "object" && kein("name", entity)) {
 			return (0, _defineProperty3.default)({}, entity.name, entity);
 
 		} else {
