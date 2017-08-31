@@ -1,38 +1,28 @@
 {
-  "name": "stagn",
-  "version": "0.13.0",
-  "description": "Attach static entity to the class.",
-  "main": "stagn.deploy.js",
-  "support": "stagn.support.js",
-  "authors": [
-    "Richeve S. Bebedor <richeve.bebedor@gmail.com>",
-    "John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
-    "Vinse Vinalon <vinsevinalon@gmail.com>"
-  ],
-  "license": "MIT",
-  "keywords": [
-    "attach",
-    "static",
-    "entity",
-    "class",
-    "stagn"
-  ],
-  "homepage": "https://github.com/volkovasystems/stagn",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "falzy": "^0.20.0",
-    "harden": "^0.22.0",
-    "kein": "^0.26.0",
-    "plough": "^0.26.0",
-    "protype": "^0.22.0",
-    "pyck": "^0.35.0",
-    "redupe": "^0.15.0",
-    "shft": "^0.2.0"
-  }
+	"name": "stagn",
+	"version": "0.13.0",
+	"description": "Attach static entity to the class.",
+	"main": "stagn.deploy.js",
+	"support": "stagn.support.js",
+	"authors": [
+		"Richeve S. Bebedor <richeve.bebedor@gmail.com>",
+		"John Lenon Maghanoy <johnlenonmaghanoy@gmail.com>",
+		"Vinse Vinalon <vinsevinalon@gmail.com>"
+	],
+	"license": "MIT",
+	"keywords": [
+		"attach",
+		"static",
+		"entity",
+		"class",
+		"stagn"
+	],
+	"homepage": "https://github.com/volkovasystems/stagn",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests"
+	]
 }
