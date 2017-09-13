@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"stagn": "stagn"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const stagn = require( "./stagn.js" );
@@ -63,11 +63,21 @@ const stagn = require( "./stagn.js" );
 
 
 //: @server:
-
 describe( "stagn", ( ) => {
 
-} );
+	describe( "`stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )`", ( ) => {
+		it( "should attach static entity to the class", ( ) => {
+			let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
 
+			assert.equal( typeof Test, "function" );
+
+			assert.equal( Test.yeah, "world" );
+
+			// assert.equal( typeof Test.why, "function" );
+		} );
+	} );
+
+} );
 //: @end-server
 
 

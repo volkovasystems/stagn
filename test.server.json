@@ -1,16 +1,32 @@
 {
-  "stats": {
-    "suites": 0,
-    "tests": 0,
-    "passes": 0,
-    "pending": 0,
-    "failures": 0,
-    "start": "2017-09-04T13:39:10.192Z",
-    "end": "2017-09-04T13:39:10.192Z",
-    "duration": 0
-  },
-  "tests": [],
-  "pending": [],
-  "failures": [],
-  "passes": []
+	"stats": {
+		"suites": 2,
+		"tests": 1,
+		"passes": 1,
+		"pending": 0,
+		"failures": 0,
+		"start": "2017-09-13T08:16:09.404Z",
+		"end": "2017-09-13T08:16:09.417Z",
+		"duration": 13
+	},
+	"tests": [
+		{
+			"title": "should attach static entity to the class",
+			"fullTitle": "stagn `stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )` should attach static entity to the class",
+			"duration": 5,
+			"currentRetry": 0,
+			"err": {}
+		}
+	],
+	"pending": [],
+	"failures": [],
+	"passes": [
+		{
+			"title": "should attach static entity to the class",
+			"fullTitle": "stagn `stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )` should attach static entity to the class",
+			"duration": 5,
+			"currentRetry": 0,
+			"err": {}
+		}
+	]
 }

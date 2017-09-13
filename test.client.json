@@ -1,0 +1,84 @@
+{
+	"state": {
+		"passed": 1,
+		"failed": 0,
+		"skipped": 0
+	},
+	"start": "2017-09-13T08:16:10.647Z",
+	"end": "2017-09-13T08:16:59.133Z",
+	"capabilities": {
+		"browserName": "chrome",
+		"chromeOptions": {
+			"args": [
+				"disable-gpu",
+				"headless"
+			]
+		},
+		"proxy": null
+	},
+	"host": "127.0.0.1",
+	"port": 4444,
+	"baseUrl": "http://localhost",
+	"framework": "mocha",
+	"mochaOpts": {
+		"timeout": 10000,
+		"ui": "bdd"
+	},
+	"suites": [
+		{
+			"name": "stagn",
+			"duration": 0,
+			"start": "2017-09-13T08:16:58.778Z",
+			"tests": [],
+			"hooks": []
+		},
+		{
+			"name": "stagn",
+			"duration": 176,
+			"start": "2017-09-13T08:16:58.779Z",
+			"end": "2017-09-13T08:16:58.955Z",
+			"tests": [],
+			"hooks": [
+				{
+					"start": "2017-09-13T08:16:58.781Z",
+					"end": "2017-09-13T08:16:58.781Z",
+					"duration": 0,
+					"title": "\"before each\" hook",
+					"associatedSuite": "stagn",
+					"associatedTest": "should attach static entity to the class"
+				},
+				{
+					"start": "2017-09-13T08:16:58.954Z",
+					"end": "2017-09-13T08:16:58.954Z",
+					"duration": 0,
+					"title": "\"after each\" hook",
+					"associatedSuite": "stagn",
+					"associatedTest": "should attach static entity to the class"
+				},
+				{
+					"start": "2017-09-13T08:16:58.955Z",
+					"end": "2017-09-13T08:16:58.955Z",
+					"duration": 0,
+					"title": "\"after all\" hook",
+					"associatedSuite": "stagn"
+				}
+			]
+		},
+		{
+			"name": "`stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )`",
+			"duration": 174,
+			"start": "2017-09-13T08:16:58.780Z",
+			"end": "2017-09-13T08:16:58.954Z",
+			"tests": [
+				{
+					"name": "should attach static entity to the class",
+					"start": "2017-09-13T08:16:58.781Z",
+					"end": "2017-09-13T08:16:58.953Z",
+					"duration": 172,
+					"state": "pass"
+				}
+			],
+			"hooks": []
+		}
+	]
+}
