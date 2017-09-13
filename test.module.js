@@ -45,13 +45,13 @@
 
 	@include:
 		{
-			"assert": "should",
+			"assert": "should/as-function",
 			"stagn": "stagn"
 		}
 	@end-include
 */
 
-const assert = require( "should" );
+const assert = require( "should/as-function" );
 
 //: @server:
 const stagn = require( "./stagn.js" );
@@ -67,27 +67,67 @@ const path = require( "path" );
 
 
 //: @server:
-
 describe( "stagn", ( ) => {
 
-} );
+	describe( "`stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )`", ( ) => {
+		it( "should attach static entity to the class", ( ) => {
+			let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
 
+			assert.equal( typeof Test, "function" );
+
+			assert.equal( Test.yeah, "world" );
+
+			// assert.equal( typeof Test.why, "function" );
+		} );
+	} );
+
+} );
 //: @end-server
 
 
 //: @client:
-
 describe( "stagn", ( ) => {
 
-} );
+	describe( "`stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )`", ( ) => {
+		it( "should attach static entity to the class", ( ) => {
+			let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
 
+			assert.equal( typeof Test, "function" );
+
+			assert.equal( Test.yeah, "world" );
+
+			// assert.equal( typeof Test.why, "function" );
+		} );
+	} );
+
+} );
 //: @end-client
 
 
 //: @bridge:
-
 describe( "stagn", ( ) => {
 
-} );
+	let bridgeURL = `file://${ path.resolve( __dirname, "bridge.html" ) }`;
 
+	describe( "`stagn( function Hello( ){ }, { 'yeah': 'world' }, function why( ){ } )`", ( ) => {
+		it( "should attach static entity to the class", ( ) => {
+			//: @ignore:
+			let result = browser.url( bridgeURL ).execute(
+
+				function( ){
+					let Test = stagn( function Hello( ){ }, { "yeah": "world" }, function why( ){ } );
+
+					return typeof Test == "function" && Test.yeah == "world";
+				}
+
+			).value;
+			//: @end-ignore
+
+			assert.equal( result, true );
+
+			// assert.equal( typeof Test.why, "function" );
+		} );
+	} );
+
+} );
 //: @end-bridge
